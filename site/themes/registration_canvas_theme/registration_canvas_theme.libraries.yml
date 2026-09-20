@@ -1,0 +1,7 @@
+# Loaded on every page. Component CSS lives beside each component in
+# components/<name>/ and is attached by the component itself, so this library
+# is only for theme-wide rules that belong to no single component.
+base:
+  css:
+    theme:
+      css/base.css: {}

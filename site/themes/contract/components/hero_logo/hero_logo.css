@@ -1,0 +1,89 @@
+/**
+ * @file
+ * Hero with logo. The background image and colour run full-bleed.
+ */
+
+.c-hero-logo {
+  position: relative;
+  isolation: isolate;
+  color: var(--c-fg, inherit);
+}
+
+.c-hero-logo__media,
+.c-hero-logo.c-bg--primary::before,
+.c-hero-logo.c-bg--secondary::before,
+.c-hero-logo.c-bg--accent::before,
+.c-hero-logo.c-bg--muted::before,
+.c-hero-logo.c-bg--inverted::before {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  z-index: -2;
+}
+
+.c-hero-logo[class*='c-bg--']::before { background: var(--c-bg); }
+
+.c-hero-logo__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Darken an image so light text stays readable. */
+.c-hero-logo__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 0.3);
+}
+
+.c-hero-logo--has-media { color: var(--rt-white); }
+
+.c-hero-logo__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  min-height: 20rem;
+  padding-block: clamp(5.5rem, 4rem + 5vw, 8.75rem);
+}
+
+.c-hero-logo--align-left .c-hero-logo__content { text-align: left; }
+.c-hero-logo--align-right .c-hero-logo__content { text-align: right; }
+
+.c-hero-logo--align-center .c-hero-logo__content {
+  align-items: center;
+  max-width: 75%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.c-hero-logo__text {
+  max-width: 42rem;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.c-hero-logo__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.c-hero-logo--align-center .c-hero-logo__actions { align-items: center; justify-content: center; }
+.c-hero-logo--align-left .c-hero-logo__actions { justify-content: flex-start; }
+.c-hero-logo--align-right .c-hero-logo__actions { justify-content: flex-end; }
+
+@media (min-width: 40rem) {
+  .c-hero-logo__actions { flex-direction: row; }
+}
+
+@media (max-width: 48rem) {
+  .c-hero-logo--align-center .c-hero-logo__content { max-width: none; }
+}

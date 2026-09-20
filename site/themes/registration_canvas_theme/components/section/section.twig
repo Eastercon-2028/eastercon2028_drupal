@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Section component. Props mirror Mercury's section.
+ */
+#}
+{% set has_background_image = background_media is not empty and background_media.src is not empty %}
+{% set classes = [
+  'c-section',
+  'c-section--width-' ~ (width|default('100%'))|replace({'%': ''}),
+  'c-section--mt-' ~ margin_block_start|default('0'),
+  'c-section--mb-' ~ margin_block_end|default('0'),
+  'c-section--pt-' ~ padding_block_start|default('0'),
+  'c-section--pb-' ~ padding_block_end|default('0'),
+  background_color is not empty ? 'c-bg--' ~ background_color,
+] %}
+
+<section{{ attributes.addClass(classes) }}>
+  {% if has_background_image %}
+    {% block background_media_block %}
+      <div class="c-section__media">
+        {% include 'canvas:image' ignore missing with {
+          src: background_media.src,
+          alt: background_media.alt,
+          width: background_media.width,
+          height: background_media.height
+        } only %}
+      </div>
+    {% endblock %}
+  {% endif %}
+
+  {% if background_color is not empty %}
+    <div class="c-section__bg{{ has_background_image ? ' c-section__bg--over-image' }}"></div>
+  {% endif %}
+
+  <div class="c-section__inner">
+    {% if section_header %}
+      {% set header_content %}
+        {% block header_slot %}{% endblock %}
+      {% endset %}
+      {% if header_content|trim is not empty %}
+        <header class="c-section__header">{{ header_content }}</header>
+      {% endif %}
+    {% endif %}
+
+    <div class="c-section__grid c-section__grid--cols-{{ columns|default('100') }} c-section__grid--mobile-{{ mobile_columns|default('1') }} c-section__grid--views-{{ views_columns|default('100') }}">
+      {% block main_slot %}{% endblock %}
+    </div>
+
+    {% if section_footer %}
+      {% set footer_content %}
+        {% block footer_slot %}{% endblock %}
+      {% endset %}
+      {% if footer_content|trim is not empty %}
+        <footer class="c-section__footer">{{ footer_content }}</footer>
+      {% endif %}
+    {% endif %}
+  </div>
+</section>

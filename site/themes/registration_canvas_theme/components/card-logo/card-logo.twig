@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Logo card component. Props mirror Mercury's card-logo.
+ */
+#}
+{% set classes = [
+  'c-card-logo',
+  'c-card-logo--radius-' ~ border_radius|default('none'),
+  url is not empty ? 'c-card-logo--link',
+  background_color is not empty ? 'c-bg--' ~ background_color,
+] %}
+{% set image %}
+  {% if media.src is not empty %}
+    {% include 'canvas:image' ignore missing with {
+      src: media.src,
+      alt: media.alt,
+      width: media.width,
+      height: media.height
+    } only %}
+  {% endif %}
+{% endset %}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="c-card-logo__inner">
+    {% if url is not empty %}
+      <a href="{{ url }}">{{ image }}</a>
+    {% else %}
+      {{ image }}
+    {% endif %}
+  </div>
+</div>

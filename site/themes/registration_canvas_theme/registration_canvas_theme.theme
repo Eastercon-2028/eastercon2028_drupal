@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Theme hooks for Registration Canvas Theme.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_preprocess_HOOK() for page-title.html.twig.
+ *
+ * Canvas pages and nodes whose bundle has a Canvas content template print
+ * their own heading from that template, so the title block would repeat it.
+ * Everywhere else (ConReg forms, user pages, node types with no template) the
+ * title block is the only heading, so it is shown.
+ */
+function registration_canvas_theme_preprocess_page_title(array &$variables): void {
+  $variables['title_text'] = '';
+  if (empty($variables['title']) || _registration_canvas_theme_page_has_own_heading()) {
+    return;
+  }
+  $title = $variables['title'];
+  if (is_array($title)) {
+    $title = \Drupal::service('renderer')->renderInIsolation($title);
+  }
+  $variables['title_text'] = trim(html_entity_decode(strip_tags((string) $title), ENT_QUOTES | ENT_HTML5));
+}
+
+/**
+ * Whether the current page prints its own heading through Canvas.
+ */
+function _registration_canvas_theme_page_has_own_heading(): bool {
+  $route_match = \Drupal::routeMatch();
+  switch ($route_match->getRouteName()) {
+    case 'entity.canvas_page.canonical':
+      return TRUE;
+
+    case 'entity.node.canonical':
+      $node = $route_match->getParameter('node');
+      if ($node) {
+        $template = \Drupal::entityTypeManager()->getStorage('content_template')->load('node.' . $node->bundle() . '.full');
+        return $template && $template->status();
+      }
+      return FALSE;
+  }
+  return FALSE;
+}

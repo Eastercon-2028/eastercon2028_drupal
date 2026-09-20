@@ -1,0 +1,5 @@
+name: 'Registration Canvas'
+type: module
+description: 'Twig helpers for Canvas sites using Registration Canvas Theme, such as the heading_lead filter.'
+package: Custom
+core_version_requirement: ^11

@@ -1,0 +1,68 @@
+/**
+ * @file
+ * Contract fonts. Latin subsets only.
+ *
+ * Caladea: self-hosted, SIL OFL, metric-compatible with Cambria. Fallback for
+ * Cambria in the heading stack. Licence: fonts/Caladea-OFL.txt.
+ *
+ * Aldrich: self-hosted, SIL OFL. Stand-in for Bitwise on the highlighted start
+ * of headings. Licence: fonts/Aldrich-OFL.txt.
+ *
+ * Bitwise: the intended font for the highlighted start, chosen to echo the
+ * logo. Its licence is unclear about web use: see the warning above its
+ * @font-face before deploying.
+ */
+
+@font-face {
+  font-family: Caladea;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/caladea-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Caladea;
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/caladea-latin-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Caladea;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../fonts/caladea-latin-700-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Caladea;
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../fonts/caladea-latin-700-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Aldrich;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/aldrich-latin-400-normal.woff2") format("woff2");
+}
+
+/* Bitwise (Digital Graphic Labs, 1999): WOFF converted from the original TTF,
+ * with its !license.txt beside it. DO NOT DEPLOY until Digital Graphic Labs
+ * has given written permission to serve it as a webfont: the licence embedded
+ * in the font file forbids distribution, and the zip's !license.txt does not
+ * mention web use. If permission is refused, delete fonts/bitwise/ and this
+ * rule; the stack in brand.css then falls back to Aldrich. */
+@font-face {
+  font-family: Bitwise;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Bitwise"), url("../../fonts/bitwise/bitwise.woff") format("woff");
+}

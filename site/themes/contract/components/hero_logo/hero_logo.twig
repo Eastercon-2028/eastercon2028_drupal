@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Hero with logo. A call to action with a heading, text, a logo slot and a
+ * buttons slot, over an optional background image.
+ */
+#}
+{% set align = text_align|default('center') %}
+{% set has_media = media.src is not empty %}
+{% set classes = [
+  'c-hero-logo',
+  'c-hero-logo--align-' ~ align,
+  has_media ? 'c-hero-logo--has-media',
+  background_color is not empty ? 'c-bg--' ~ background_color,
+] %}
+
+<section{{ attributes.addClass(classes) }}>
+  {% block media %}
+    {% if has_media %}
+      <div class="c-hero-logo__media">
+        {% include 'canvas:image' ignore missing with {
+          src: media.src,
+          alt: media.alt,
+          width: media.width,
+          height: media.height
+        } only %}
+      </div>
+    {% endif %}
+  {% endblock %}
+  <div class="c-hero-logo__content">
+    {{ include('registration_canvas_theme:heading', {
+      heading_text: heading_text|default(''),
+      level: level|default(2),
+      align: align,
+      text_color: 'default',
+      text_size: 'heading-responsive-7xl',
+      url: '',
+      highlight_lead: true,
+    }, with_context: false) }}
+    {% if text is not empty %}
+      <p class="c-hero-logo__text">{{ text }}</p>
+    {% endif %}
+    {% if block('logo') is defined %}
+      <div class="c-hero-logo__logo">
+        {% block logo %}{% endblock %}
+      </div>
+    {% endif %}
+    {% if block('actions') is defined %}
+      <div class="c-hero-logo__actions">
+        {% block actions %}{% endblock %}
+      </div>
+    {% endif %}
+  </div>
+</section>

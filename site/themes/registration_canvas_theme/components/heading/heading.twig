@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Heading component.
+ *
+ * Props mirror Mercury's heading so existing Canvas content can be repointed
+ * by changing only the component ID. The start of the text is wrapped by the
+ * heading_lead filter (registration_canvas module) when highlight_lead is on.
+ */
+#}
+{% set level = level|default(2) %}
+{% set tag = level in [1, 2, 3, 4, 5, 6] ? 'h' ~ level : 'p' %}
+{% set size = text_size|default('default') starts with 'heading-responsive-' ? text_size|replace({'heading-responsive-': ''}) : 'default' %}
+{% set classes = [
+  'c-heading',
+  'c-heading--size-' ~ size,
+  'c-heading--color-' ~ text_color|default('default'),
+  'c-heading--align-' ~ align|default('left'),
+] %}
+{% set text = heading_text|default('') %}
+{% set content = (highlight_lead is same as(false)) ? text : text|heading_lead %}
+
+<{{ tag }}{{ attributes.addClass(classes) }}>
+  {%- if url is not empty -%}
+    <a href="{{ url }}">{{ content }}</a>
+  {%- else -%}
+    {{ content }}
+  {%- endif -%}
+</{{ tag }}>

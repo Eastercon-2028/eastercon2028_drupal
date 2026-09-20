@@ -1,0 +1,26 @@
+# Site project for eastercon2028.org: settings, config, and site-specific
+# modules and themes. The Composer project (Drupal core, contrib) is a separate
+# repository.
+
+# Uploaded and generated files.
+/site/files/
+
+# Environment-specific settings and credentials.
+/site/settings.local.php
+/site/settings.ddev.php
+
+# Scaffolded by Drupal core.
+/site/default.settings.php
+/site/default.services.yml
+
+# Bitwise font: its licence does not clearly allow web use, so it stays out of
+# the repository (and so off live) until Digital Graphic Labs gives written
+# permission. Without it the headings fall back to Aldrich. Delete this line
+# once permission is given.
+/site/themes/contract/fonts/bitwise/
+
+# Database dumps, Node tooling, and OS files.
+*.sql
+*.sql.gz
+node_modules/
+.DS_Store

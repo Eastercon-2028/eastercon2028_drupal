@@ -1,0 +1,33 @@
+/**
+ * @file
+ * Contract brand values.
+ *
+ * --contract-blue is the fill of the ellipse in the Contract logo. The
+ * --c-heading-* properties are read by the heading component in
+ * registration_canvas_theme (see its heading.css) and mimic the logo: the start
+ * of each heading is picked out in blue, the rest is Cambria bold italic
+ * (Caladea, then Georgia, where Cambria is not installed). The logo's own face,
+ * Westminster, cannot be used on the web: our only copy is Microsoft's.
+ */
+
+:root {
+  --contract-blue: #007ca9;
+
+  --c-heading-font: Cambria, Caladea, Georgia, serif;
+  --c-heading-weight: 700;
+  --c-heading-style: italic;
+
+  --c-heading-lead-color: var(--contract-blue);
+
+  /* The highlighted start echoes the logo's "CON": capitals in a boxy,
+   * 1960s machine-readable face. Bitwise where installed, else Aldrich (see
+   * fonts.css). Weight and style are set so the browser never fakes bold or
+   * italic on a single-weight font. */
+  --c-heading-lead-font: Bitwise, Aldrich, Cambria, Caladea, Georgia, serif;
+  --c-heading-lead-weight: 400;
+  --c-heading-lead-style: normal;
+  --c-heading-lead-transform: uppercase;
+  /* Bitwise is much lighter than the bold italic and the logo's lettering; a
+   * thin outline in the same blue brings it to a matching weight. */
+  --c-heading-lead-stroke: 0.03em;
+}

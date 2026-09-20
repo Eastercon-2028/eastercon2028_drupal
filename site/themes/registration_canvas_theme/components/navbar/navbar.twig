@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Navbar component: the menu area of the header.
+ *
+ * Meant for the primary_menu region, inside the theme's masthead, which
+ * already provides the logo area, the sticky header and the mobile menu
+ * panel and its toggle. This component only lays out the menu and any
+ * call-to-action buttons, so it needs no JavaScript.
+ */
+#}
+{% set classes = ['c-navbar', 'c-navbar--align-' ~ menu_align|default('center')] %}
+<div{{ attributes.addClass(classes) }}>
+  <div class="c-navbar__navigation">
+    {% block navigation %}{% endblock %}
+  </div>
+  {% set links_content %}
+    {% block links %}{% endblock %}
+  {% endset %}
+  {% if links_content|trim is not empty %}
+    <div class="c-navbar__links">{{ links_content }}</div>
+  {% endif %}
+</div>
