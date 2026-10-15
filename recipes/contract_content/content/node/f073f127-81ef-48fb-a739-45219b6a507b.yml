@@ -1,0 +1,39 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: f073f127-81ef-48fb-a739-45219b6a507b
+  bundle: page
+  default_langcode: en
+default:
+  revision_log:
+    -
+      value: 'Replaced by the Canvas page at /guests.'
+  status:
+    -
+      value: false
+  title:
+    -
+      value: 'Our Guests'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: unpublished
+  path:
+    -
+      langcode: en
+      alias: null
+  field_content:
+    -
+      value: '<p>We have announced three guests</p><p><a href="/node/7" data-entity-type="node" data-entity-uuid="0120c39d-36b2-4fc5-8a19-e8c06393ce69" data-entity-substitution="canonical">Adam Roberts</a></p><p><a href="/node/5" data-entity-type="node" data-entity-uuid="bcc1a0ef-9120-4478-a53f-2a3221650ce4" data-entity-substitution="canonical">Aliya Whiteley</a></p><p><a href="/node/6" data-entity-type="node" data-entity-uuid="c745b5ab-d077-47af-a42e-78213c947ede" data-entity-substitution="canonical">Chris Lintott</a></p>'
+      format: content_format
+  field_description:
+    -
+      value: 'A list of guests with links'

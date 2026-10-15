@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: f1875ca9-2e0d-4b04-8794-1a85b303a51a
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    d6574ecf-5c99-44a0-b304-639dd7dc67eb: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'What is an Eastercon'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: d6574ecf-5c99-44a0-b304-639dd7dc67eb
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: -45
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

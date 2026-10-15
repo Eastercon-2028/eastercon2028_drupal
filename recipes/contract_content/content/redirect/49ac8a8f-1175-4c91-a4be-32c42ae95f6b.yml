@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: redirect
+  uuid: 49ac8a8f-1175-4c91-a4be-32c42ae95f6b
+  bundle: redirect
+  default_langcode: en
+  depends:
+    bcc1a0ef-9120-4478-a53f-2a3221650ce4: node
+default:
+  enabled:
+    -
+      value: true
+  hash:
+    -
+      value: JdU3k3rYjAYcGbCZqnTrM-WYeJeIJKyxkwztisKwJo4
+  redirect_source:
+    -
+      path: aliya-whiteley
+      query: {  }
+  redirect_redirect:
+    -
+      title: null
+      options: {  }
+      target_uuid: bcc1a0ef-9120-4478-a53f-2a3221650ce4
+  status_code:
+    -
+      value: 301

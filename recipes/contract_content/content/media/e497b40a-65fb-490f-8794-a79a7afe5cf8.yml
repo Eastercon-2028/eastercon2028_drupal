@@ -1,0 +1,29 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: e497b40a-65fb-490f-8794-a79a7afe5cf8
+  bundle: image
+  default_langcode: en
+  depends:
+    01e79425-a2d4-40c1-a99c-9a4aaca750a5: file
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: hilton_metropole_at_night.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Nighttime view on the Hilton Metropole, a large hotel beside the Birmingham NEC.'
+      title: ''
+      width: 1024
+      height: 585
+      entity: 01e79425-a2d4-40c1-a99c-9a4aaca750a5

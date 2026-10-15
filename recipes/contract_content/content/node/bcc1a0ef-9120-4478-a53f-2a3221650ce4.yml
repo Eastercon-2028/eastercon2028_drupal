@@ -1,0 +1,44 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: bcc1a0ef-9120-4478-a53f-2a3221650ce4
+  bundle: guest
+  default_langcode: en
+  depends:
+    34676ad0-ebd8-4512-942c-02d3dd7afe94: media
+default:
+  status:
+    -
+      value: true
+  title:
+    -
+      value: 'Aliya Whiteley'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /guest/aliya-whiteley
+      langcode: en
+  field_bio:
+    -
+      value: '<p>Is an award-winning novelist and short story writer</p><p>The winner of the 2024 BSFA award for Best Novel</p>'
+      format: content_format
+      summary: 'Is an award-winning novelist and short story writer. The winner of the 2024 BSFA award for Best Novel.'
+  field_byline:
+    -
+      value: 'Award Winning Author'
+  field_links:
+    -
+      uri: 'https://aliyawhiteley.uk/'
+      title: "Aliya Whiteley's website"
+      options: {  }
+  field_photo:
+    -
+      entity: 34676ad0-ebd8-4512-942c-02d3dd7afe94

@@ -1,0 +1,29 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 58c5dd12-7577-4345-ae37-7b64ca0077f7
+  bundle: image
+  default_langcode: en
+  depends:
+    c82e3b3e-909a-480f-93d8-10336a39e31b: file
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: adam-roberts.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Adam Roberts'
+      title: ''
+      width: 371
+      height: 343
+      entity: c82e3b3e-909a-480f-93d8-10336a39e31b

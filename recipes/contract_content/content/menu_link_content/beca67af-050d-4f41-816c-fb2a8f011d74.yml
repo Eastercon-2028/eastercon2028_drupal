@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: beca67af-050d-4f41-816c-fb2a8f011d74
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    9ba5d2d5-8a99-4245-b458-872cfab1268a: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Hotel
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: 9ba5d2d5-8a99-4245-b458-872cfab1268a
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: -48
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

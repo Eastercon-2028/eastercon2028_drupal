@@ -1,0 +1,48 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: c745b5ab-d077-47af-a42e-78213c947ede
+  bundle: guest
+  default_langcode: en
+  depends:
+    ffd0bc8e-eb65-43ab-8364-2216395e5c5c: media
+default:
+  status:
+    -
+      value: true
+  title:
+    -
+      value: 'Chris Lintott'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /guest/chris-lintott
+      langcode: en
+  field_bio:
+    -
+      value: '<p>Chris did his first degree at Cambridge, before defecting to become Professor of Astrophysics in the Department of Physics at the University of Oxford</p><p>He is also Gresham Professor of Astronomy at Gresham College, London.</p><p>And he also presents the Sky at Night</p>'
+      format: content_format
+      summary: 'Chris did his first degree at Cambridge, before defecting to become Professor of Astrophysics in the Department of Physics at the University of Oxford. And he also presents the Sky at Night.'
+  field_byline:
+    -
+      value: Astrophysicist
+  field_links:
+    -
+      uri: 'https://www.bbc.co.uk/programmes/profiles/4jgzzH6CBH7b5K0qblb73nZ/professor-chris-lintott'
+      title: 'BBC Sky at night profile'
+      options: {  }
+    -
+      uri: 'https://www.physics.ox.ac.uk/our-people/lintott'
+      title: 'Chris Lintott University of Oxford page'
+      options: {  }
+  field_photo:
+    -
+      entity: ffd0bc8e-eb65-43ab-8364-2216395e5c5c

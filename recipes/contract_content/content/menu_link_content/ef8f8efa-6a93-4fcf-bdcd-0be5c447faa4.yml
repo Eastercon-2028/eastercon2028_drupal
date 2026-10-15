@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: ef8f8efa-6a93-4fcf-bdcd-0be5c447faa4
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    2f4a1cb1-7e57-4ec9-b33e-adb54ab7e866: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Committee
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: 2f4a1cb1-7e57-4ec9-b33e-adb54ab7e866
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: -49
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

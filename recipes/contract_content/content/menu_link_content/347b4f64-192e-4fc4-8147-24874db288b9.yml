@@ -1,0 +1,41 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 347b4f64-192e-4fc4-8147-24874db288b9
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    303cad79-311e-4b64-88e3-fe594759ed2a: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Check your membership'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:/members/check'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -49
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:303cad79-311e-4b64-88e3-fe594759ed2a'
+  revision_translation_affected:
+    -
+      value: true

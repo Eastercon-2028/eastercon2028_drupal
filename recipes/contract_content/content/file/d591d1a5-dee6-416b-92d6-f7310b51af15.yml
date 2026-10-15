@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: d591d1a5-dee6-416b-92d6-f7310b51af15
+  default_langcode: en
+default:
+  filename:
+    -
+      value: Aliya.jpg
+  uri:
+    -
+      value: 'public://2026-05/Aliya.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 14970
+  status:
+    -
+      value: true

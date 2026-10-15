@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 01e79425-a2d4-40c1-a99c-9a4aaca750a5
+  default_langcode: en
+default:
+  filename:
+    -
+      value: hilton_metropole_at_night.jpg
+  uri:
+    -
+      value: 'public://2026-04/hilton_metropole_at_night.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 92190
+  status:
+    -
+      value: true

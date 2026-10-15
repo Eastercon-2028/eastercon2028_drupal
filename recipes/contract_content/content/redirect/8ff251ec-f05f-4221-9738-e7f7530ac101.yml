@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: redirect
+  uuid: 8ff251ec-f05f-4221-9738-e7f7530ac101
+  bundle: redirect
+  default_langcode: und
+  depends:
+    79dd3025-fc14-4362-a1df-4979c234c68d: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  hash:
+    -
+      value: _FqpW-deeF8d1Ppj4tWl_rHX1-Frsvi50Ivs35nuOYY
+  redirect_source:
+    -
+      path: our-guests
+      query: {  }
+  redirect_redirect:
+    -
+      title: null
+      options: {  }
+      target_uuid: 79dd3025-fc14-4362-a1df-4979c234c68d
+  status_code:
+    -
+      value: 301

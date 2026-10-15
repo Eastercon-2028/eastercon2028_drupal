@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: redirect
+  uuid: 14a46145-7d7b-4821-b075-4fe672c0c72e
+  bundle: redirect
+  default_langcode: en
+  depends:
+    69bfbe7c-86e8-4eb9-bb4e-e6f2e49ba53d: node
+default:
+  enabled:
+    -
+      value: true
+  hash:
+    -
+      value: 0-pAVDroEY77dajs01bBuW7wFTQyjQ8a0jic6fPvQVA
+  redirect_source:
+    -
+      path: code-conduct-version-1-may-2026
+      query: {  }
+  redirect_redirect:
+    -
+      title: null
+      options: {  }
+      target_uuid: 69bfbe7c-86e8-4eb9-bb4e-e6f2e49ba53d
+  status_code:
+    -
+      value: 301

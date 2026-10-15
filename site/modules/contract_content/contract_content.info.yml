@@ -1,0 +1,5 @@
+name: 'Contract Content'
+type: module
+description: 'Moves site content (pages, Canvas pages, menus, redirects) between environments as default content in the contract_content recipe, updating existing items by UUID instead of skipping them.'
+package: Custom
+core_version_requirement: ^11.3

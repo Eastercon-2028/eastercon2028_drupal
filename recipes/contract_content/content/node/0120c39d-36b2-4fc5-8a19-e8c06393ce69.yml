@@ -1,0 +1,44 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 0120c39d-36b2-4fc5-8a19-e8c06393ce69
+  bundle: guest
+  default_langcode: en
+  depends:
+    58c5dd12-7577-4345-ae37-7b64ca0077f7: media
+default:
+  status:
+    -
+      value: true
+  title:
+    -
+      value: 'Adam Roberts'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /guest/adam-roberts
+      langcode: en
+  field_bio:
+    -
+      value: '<p>Adam Roberts has a parallel career as an academic, teaching English at Royal Holloway, and an author.</p><p>His first novel Salt was nominated for the Arthur C. Clarke Award, the first of three nominations. While Jack Glass won the 2012 BSFA Award. He has also twice won the BSFA Award for non-fiction for his criticism.&nbsp;</p><p>As well as his serious novels, he writes parodies, including The Soddit credited to A. R. R. Roberts. &nbsp;&nbsp;</p><p>Adam was invited to be a guest at Concentric, the convention that was cancelled due to Covid.</p>'
+      format: content_format
+      summary: 'Adam Roberts has a parallel career as an academic, teaching English at Royal Holloway, and an author. His first novel Salt was nominated for the Arthur C. Clarke Award, the first of three nominations. While Jack Glass won the 2012 BSFA Award. He has also twice won the BSFA Award for non-fiction for his criticism. '
+  field_byline:
+    -
+      value: 'Academic and author'
+  field_links:
+    -
+      uri: 'https://pure.royalholloway.ac.uk/en/persons/adam-roberts/'
+      title: 'Adam Roberts at Royal Holloway'
+      options: {  }
+  field_photo:
+    -
+      entity: 58c5dd12-7577-4345-ae37-7b64ca0077f7

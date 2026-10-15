@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 9ba5d2d5-8a99-4245-b458-872cfab1268a
+  bundle: page
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  title:
+    -
+      value: Hotel
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /hotel
+      langcode: en
+  field_content:
+    -
+      value: "<p>If you have been to a recent Eastercon, you probably do not need to be introduced to the Birmingham Metropole, as it has been the home to several recent Eastercons.</p><p>If you haven't, you need to know it is a Hilton, so the bedrooms are comfortable and clean, with all the facilities you would expect in a business hotel. Including a pool and gym.</p><p>It has plenty of conference rooms of different sizes, making it one of the few venues that can hold an Eastercon with rooms to spare. All the convention rooms are on the ground floor, with step free access. &nbsp;</p><p>It is situated alongside the NEC and that means it is close to the M42 and M6 providing easy access by car.&nbsp;</p><p>There is ample parking on site. There is a charge for parking, but we will have a reduced convention rate.</p><p>If you come by public transport, there are a number of options.</p><p>The Birmingham International Railway Station is about seven minutes walk from the hotel. This has a wide range of direct services, and many other routes can be reached by changing at New Street.</p><p>Birmingham International Airport is about a twelve-minute walk, or you can use the air-rail link to get to the station.</p><p>National Express and other coach services serve the airport.</p><p>The main social space is the hotel bar, which also serves food. There is also a coffee shop serving hot drinks and snacks. While the hotel does not normally serve real ale, we will of course be laying on a Real Ale bar.&nbsp;</p><p>As well as the bar menu, the hotel has a restaurant, and a separate breakfast area. Additional options will be provided through food trucks parked outside.</p><p>There are also a number of other places to eat around the NEC - though opening hours may vary across the weekend depending on events at the NEC.</p>"
+      format: content_format
+  field_description:
+    -
+      value: 'The faclities at the hotel'

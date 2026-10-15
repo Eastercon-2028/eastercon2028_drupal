@@ -1,0 +1,122 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: bb5bbbb1-4a16-4b86-bbea-b215ab8096cf
+  default_langcode: en
+  depends:
+    01e79425-a2d4-40c1-a99c-9a4aaca750a5: file
+    e497b40a-65fb-490f-8794-a79a7afe5cf8: media
+    13e2aa02-4e35-4aaa-a11c-e369c63259d9: file
+    3b1a79d8-dc01-4e4a-a97d-ff173688fedc: media
+default:
+  revision_log:
+    -
+      value: 'Repointed components from Mercury to registration_canvas_theme.'
+  status:
+    -
+      value: true
+  title:
+    -
+      value: Home
+  components:
+    -
+      uuid: cebfef2c-6c78-44ad-a5a6-602f8a82290c
+      component_id: sdc.contract.hero_logo
+      inputs:
+        heading_text: 'Eastercon 2028'
+        level: 2
+        text: 'Hilton Metropole Hotel, Birmingham — 14–17 April 2028'
+        text_align: center
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e497b40a-65fb-490f-8794-a79a7afe5cf8
+            target_type: media
+        background_color: inverted
+    -
+      parent_uuid: cebfef2c-6c78-44ad-a5a6-602f8a82290c
+      slot: logo
+      uuid: 005ac27b-92e5-4433-a4df-0663d63a8ddd
+      component_id: sdc.registration_canvas_theme.card-logo
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 3b1a79d8-dc01-4e4a-a97d-ff173688fedc
+            target_type: media
+        border_radius: small
+    -
+      parent_uuid: cebfef2c-6c78-44ad-a5a6-602f8a82290c
+      slot: actions
+      uuid: 50dc9118-3491-4899-b29d-7a6f64dbc5d6
+      component_id: sdc.registration_canvas_theme.button
+      inputs:
+        variant: primary
+        size: large
+        icon: caret-right
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        label: Register
+        href:
+          uri: 'internal:/register'
+          options: {  }
+    -
+      uuid: 8b5b6716-5bdb-446f-b7e6-b7b3fec4aa51
+      component_id: sdc.registration_canvas_theme.section
+      inputs:
+        width: 100%
+        columns: '100'
+        views_columns: 33-33-33
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '0'
+        padding_block_start: '64'
+        padding_block_end: '64'
+        background_color: primary
+        section_header: true
+        section_footer: true
+        footer_align: center
+    -
+      parent_uuid: 8b5b6716-5bdb-446f-b7e6-b7b3fec4aa51
+      slot: header_slot
+      uuid: 2063c2bb-1932-4225-a16c-f8c6be8dc6b7
+      component_id: sdc.registration_canvas_theme.heading
+      inputs:
+        heading_text: 'Our guests'
+        level: 2
+        text_size: default
+        text_color: default
+        align: center
+        highlight_lead: true
+    -
+      parent_uuid: 8b5b6716-5bdb-446f-b7e6-b7b3fec4aa51
+      slot: main_slot
+      uuid: 5b2f378d-56b5-47f0-96af-fd213ecbb074
+      component_id: block.views_block.guests-block_2
+      inputs:
+        label: 'Guests teaser'
+        label_display: '0'
+        views_label: ''
+        items_per_page: null
+    -
+      parent_uuid: 8b5b6716-5bdb-446f-b7e6-b7b3fec4aa51
+      slot: footer_slot
+      uuid: 4379dd90-8ac7-4bea-9f6e-13723c615b6e
+      component_id: sdc.registration_canvas_theme.button
+      inputs:
+        variant: primary-inverted
+        size: large
+        icon: arrow-right
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        label: 'Learn about our guests'
+        href:
+          uri: 'entity:canvas_page/4'
+          options: {  }
+  path:
+    -
+      alias: /home
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

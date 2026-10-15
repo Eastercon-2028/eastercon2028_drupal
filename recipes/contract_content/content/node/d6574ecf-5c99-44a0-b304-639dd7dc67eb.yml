@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: d6574ecf-5c99-44a0-b304-639dd7dc67eb
+  bundle: page
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  title:
+    -
+      value: 'What is an Eastercon'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /what-eastercon
+      langcode: en
+  field_content:
+    -
+      value: '<p>Eastercon is the annual British National Science Fiction Convention. It has been held over the Easter weekend every year since 1955.</p><p>Eastercon attracts 800-1,200 fans of Science Fiction, Fantasy and similar genres. Programme events usually include panels, workshops, talks, quizzes, competitions, an Art Show, and a Dealers Room selling books and other items. Events range from hard science through writing workshops to the fun and silly. People are encouraged to take part.</p><p>Because it is considered to be a place for fans to meet and take part, rather than sit and listen to presentations, it’s a convention and not a conference. Similarly, when you pay your money to take part, you buy a membership in Eastercon and not a ticket.</p><p>Each year the convention is run by a different committee, made up of volunteers from the community.</p><p>The Eastercon for 2028 is called Contract, and you have already found the website for it! If you are interested, please <a href="https://registration.conversation2023.org.uk/">join</a>!</p><p>The Eastercon for 2027 is called Unconfined and will be Glasgow, and you can find more details over on <a href="https://eastercon2024.co.uk/">their website</a>. Please <a href="https://easterconglasgow.org/membership-information/">join their convention</a> as well!</p><p>If you want to find out more about Eastercons, you can start by browsing the <a href="https://eastercon.fandom.com/wiki/Eastercon_Wiki">Eastercon Wiki</a>.</p><p>&nbsp;</p><p><em>This article uses material from the </em><a href="https://eastercon.fandom.com/wiki/Eastercon_Wiki"><em>Eastercon Wiki</em></a><em> and&nbsp;is licensed under the </em><a href="https://creativecommons.org/licenses/by-sa/3.0/"><em>Creative Commons Attribution-Share Alike License</em></a><em>.</em></p>'
+      format: content_format
+  field_description:
+    -
+      value: 'A brief description of Eastercon'

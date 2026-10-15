@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: ade3d1fa-48b6-48e4-98af-2cf9950c80e5
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    c82e3b3e-909a-480f-93d8-10336a39e31b: file
+default:
+  entity_id:
+    -
+      uuid: c82e3b3e-909a-480f-93d8-10336a39e31b
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/adam-roberts.png'
+  x:
+    -
+      value: 186
+  'y':
+    -
+      value: 172
+  revision_translation_affected:
+    -
+      value: true

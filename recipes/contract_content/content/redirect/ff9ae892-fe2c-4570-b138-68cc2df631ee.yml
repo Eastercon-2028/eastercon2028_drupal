@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: redirect
+  uuid: ff9ae892-fe2c-4570-b138-68cc2df631ee
+  bundle: redirect
+  default_langcode: en
+  depends:
+    c745b5ab-d077-47af-a42e-78213c947ede: node
+default:
+  enabled:
+    -
+      value: true
+  hash:
+    -
+      value: k-ziTgsLLFaM-LireuHPkB5LzV4-BRkWCH5gOklmi7g
+  redirect_source:
+    -
+      path: chris-lintott
+      query: {  }
+  redirect_redirect:
+    -
+      title: null
+      options: {  }
+      target_uuid: c745b5ab-d077-47af-a42e-78213c947ede
+  status_code:
+    -
+      value: 301

@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 9e40e87b-8eb9-4c15-a731-7d9e9b74561f
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    69bfbe7c-86e8-4eb9-bb4e-e6f2e49ba53d: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Code of Conduct'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: 69bfbe7c-86e8-4eb9-bb4e-e6f2e49ba53d
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: -46
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: redirect
+  uuid: bf516cae-2127-4640-9234-6031499292ec
+  bundle: redirect
+  default_langcode: en
+  depends:
+    0120c39d-36b2-4fc5-8a19-e8c06393ce69: node
+default:
+  enabled:
+    -
+      value: true
+  hash:
+    -
+      value: O7ZOmL961lt8GgJ0zIhEQeS57ZxmdaPDip7Q8oBgCG8
+  redirect_source:
+    -
+      path: adam-roberts
+      query: {  }
+  redirect_redirect:
+    -
+      title: null
+      options: {  }
+      target_uuid: 0120c39d-36b2-4fc5-8a19-e8c06393ce69
+  status_code:
+    -
+      value: 301

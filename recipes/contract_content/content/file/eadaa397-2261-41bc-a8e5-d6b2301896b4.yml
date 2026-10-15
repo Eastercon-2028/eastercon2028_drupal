@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: eadaa397-2261-41bc-a8e5-d6b2301896b4
+  default_langcode: en
+default:
+  filename:
+    -
+      value: Chris.jpg
+  uri:
+    -
+      value: 'public://2026-05/Chris.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 30424
+  status:
+    -
+      value: true

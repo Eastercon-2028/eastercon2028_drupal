@@ -1,0 +1,58 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 79dd3025-fc14-4362-a1df-4979c234c68d
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  title:
+    -
+      value: 'Our Guests'
+  description:
+    -
+      value: 'The guests of Contract, Eastercon 2028.'
+  components:
+    -
+      uuid: bab9fea9-3806-46a3-82f1-0ddcece74c4e
+      component_id: sdc.registration_canvas_theme.section
+      inputs:
+        width: 75%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '0'
+        padding_block_start: '32'
+        padding_block_end: '64'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: bab9fea9-3806-46a3-82f1-0ddcece74c4e
+      slot: header_slot
+      uuid: 2178276d-828e-438c-8222-388e69920140
+      component_id: sdc.registration_canvas_theme.heading
+      inputs:
+        heading_text: 'Our Guests'
+        level: 1
+        text_size: default
+        text_color: default
+        align: center
+        highlight_lead: true
+    -
+      parent_uuid: bab9fea9-3806-46a3-82f1-0ddcece74c4e
+      slot: main_slot
+      uuid: bf91e5a2-71cc-4f1a-be17-91c6c6f206f8
+      component_id: block.views_block.guests-block_1
+      inputs:
+        label: Guests
+        label_display: '0'
+        views_label: ''
+        items_per_page: null
+  path:
+    -
+      alias: /guests
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

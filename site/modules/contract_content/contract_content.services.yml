@@ -1,0 +1,10 @@
+services:
+  _defaults:
+    autowire: true
+  contract_content.export_subscriber:
+    class: Drupal\contract_content\EventSubscriber\ExportSubscriber
+    tags:
+      - { name: event_subscriber }
+  contract_content.updater:
+    class: Drupal\contract_content\ContentUpdater
+  Drupal\contract_content\ContentUpdater: '@contract_content.updater'

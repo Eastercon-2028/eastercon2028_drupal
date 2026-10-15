@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 13e2aa02-4e35-4aaa-a11c-e369c63259d9
+  default_langcode: en
+default:
+  filename:
+    -
+      value: contract-logo-animated.svg
+  uri:
+    -
+      value: 'public://2026-10/contract-logo-animated.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 50684
+  status:
+    -
+      value: true
