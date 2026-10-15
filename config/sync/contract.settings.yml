@@ -4,10 +4,10 @@ features:
   comment_user_verification: true
   favicon: 1
 logo:
-  use_default: 0
-  path: 'public://logo_website_0.png'
+  use_default: 1
+  path: ''
 favicon:
-  use_default: 0
-  path: 'public://favicon_0.ico'
+  use_default: 1
+  path: ''
   mimetype: image/vnd.microsoft.icon
 scheme: null
