@@ -1,0 +1,19 @@
+uuid: cbbd5153-6d55-4a0e-8cf8-05588726c0bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - conreg
+    - navigation
+    - system
+id: membership
+label: Membership
+weight: 4
+is_admin: false
+permissions:
+  - 'access navigation'
+  - 'check in convention members'
+  - 'check membership'
+  - 'fan table registration'
+  - 'view membership summary'
+  - 'view the administration theme'

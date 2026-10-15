@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Guest teaser component.
+ *
+ * The name is the only link; the CSS stretches it over the whole teaser, so
+ * the photo is clickable too without a second, duplicate link.
+ *
+ * Views Row SDC passes a slot as markup even when its field is empty, so the
+ * photo is checked by its rendered output.
+ */
+#}
+<article{{ attributes.addClass('c-guest-teaser', url is not empty ? 'c-guest-teaser--link') }}>
+  {% if photo|render|trim is not empty %}
+    <div class="c-guest-teaser__photo">{{ photo }}</div>
+  {% endif %}
+  {% include 'registration_canvas_theme:heading' with {
+    heading_text: name,
+    level: heading_level in [2, 3, 4, 5, 6] ? heading_level : 3,
+    text_size: 'heading-responsive-2xl',
+    text_color: 'default',
+    align: 'center',
+    url: url|default(''),
+    attributes: create_attribute({'class': ['c-guest-teaser__name']}),
+  } only %}
+</article>

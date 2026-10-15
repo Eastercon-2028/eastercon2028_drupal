@@ -1,0 +1,19 @@
+uuid: 3455ff2d-e76a-4e60-a6a2-d8ccbde8cce7
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.contract.hero_logo
+    - canvas.component.sdc.mercury.cta
+    - canvas.component.sdc.mercury.hero-billboard
+    - canvas.component.sdc.mercury.hero-blog
+    - canvas.component.sdc.mercury.hero-side-by-side
+name: Hero
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.contract.hero_logo
+  - sdc.mercury.cta
+  - sdc.mercury.hero-billboard
+  - sdc.mercury.hero-blog
+  - sdc.mercury.hero-side-by-side

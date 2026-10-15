@@ -1,0 +1,22 @@
+uuid: 2e9e7fe5-2662-48aa-8002-5bf4988dbe8a
+langcode: en
+status: true
+dependencies:
+  module:
+    - conreg
+    - klaro
+    - media
+    - simplenews
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'subscribe to newsletters'
+  - 'use klaro'
+  - 'view media'
+  - 'view public members'

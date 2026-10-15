@@ -1,0 +1,10 @@
+uuid: 64001b20-46db-4d74-9a47-5088a20ccf47
+langcode: en
+status: true
+dependencies:
+  theme:
+    - contract
+id: contract.footer
+region: footer
+theme: contract
+component_tree: {  }

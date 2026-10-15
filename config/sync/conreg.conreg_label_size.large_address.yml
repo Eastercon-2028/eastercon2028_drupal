@@ -1,0 +1,9 @@
+uuid: 38ed55bb-c891-4cf9-9c41-33760c6043ef
+langcode: en
+status: true
+dependencies: {  }
+id: large_address
+label: 'Large Address (36 x 89mm)'
+width_mm: 36
+height_mm: 89
+rotate_degrees: 90

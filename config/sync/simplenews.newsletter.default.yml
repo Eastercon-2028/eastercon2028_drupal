@@ -1,0 +1,22 @@
+uuid: 7903df86-d8b4-4041-9ef2-1e5abfc0d1d8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wg5cCxB554rXZx4TIzUACcXRXe-VSodwqcq-_QS4Tv0
+name: 'Contract Eastercon 2028 newsletter'
+id: default
+description: 'Newsletter for Contract - Eastercon 2028'
+format: html
+priority: 0
+receipt: true
+from_name: 'Contract - Eastercon 2028'
+subject: '[[simplenews-newsletter:name]] [node:title]'
+from_address: info@eastercon2028.org.uk
+hyperlinks: false
+allowed_handlers:
+  simplenews_all: '0'
+new_account: none
+access: default
+reason: ''
+weight: 0

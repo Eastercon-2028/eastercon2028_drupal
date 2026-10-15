@@ -1,0 +1,26 @@
+uuid: d8ac7e09-3df3-4e8c-b670-0bb263359c7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.guests
+  module:
+    - views
+active_version: 0b693c35f9e4afc5
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:guests-block_1'
+        label: Guests
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: Guests
+id: block.views_block.guests-block_1
+provider: views
+source: block
+source_local_id: 'views_block:guests-block_1'

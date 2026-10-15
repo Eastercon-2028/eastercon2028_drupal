@@ -1,0 +1,36 @@
+uuid: a4170616-0692-4641-9f75-5e6e4f41f5b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - registration_canvas_theme
+active_version: a17776a01a0c76b4
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        menu_align:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: center
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        navigation:
+          title: 'Navigation menu'
+        links:
+          title: CTAs
+label: Navbar
+id: sdc.registration_canvas_theme.navbar
+provider: registration_canvas_theme
+source: sdc
+source_local_id: 'registration_canvas_theme:navbar'

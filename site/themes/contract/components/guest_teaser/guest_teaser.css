@@ -1,0 +1,82 @@
+/**
+ * @file
+ * Guest teaser component.
+ *
+ * The photo is a circle with a ring around it, like the guest card's, in the
+ * text colour, so it shows on a coloured background (--c-guest-teaser-ring
+ * overrides it). With a link, the name's link covers the whole teaser.
+ */
+
+.c-guest-teaser {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.c-guest-teaser__photo {
+  /* Room for the ring, which is drawn outside the image. */
+  padding: 0.5rem;
+}
+
+.c-guest-teaser__photo img {
+  display: block;
+  width: 10rem;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+  border-radius: 50%;
+  outline: 0.1875rem solid var(--c-guest-teaser-ring, currentColor);
+  outline-offset: 0.3125rem;
+}
+
+.c-guest-teaser__name {
+  margin: 0;
+}
+
+.c-guest-teaser--link .c-guest-teaser__name a {
+  text-decoration: none;
+}
+
+.c-guest-teaser--link .c-guest-teaser__name a::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+}
+
+.c-guest-teaser--link:hover .c-guest-teaser__name a,
+.c-guest-teaser--link:focus-within .c-guest-teaser__name a {
+  text-decoration: underline;
+}
+
+.c-guest-teaser--link:hover .c-guest-teaser__photo img,
+.c-guest-teaser--link:focus-within .c-guest-teaser__photo img {
+  transform: scale(1.04);
+}
+
+/* The link covers the teaser, so its keyboard focus ring goes round the
+ * teaser. */
+.c-guest-teaser--link:has(a:focus-visible) {
+  border-radius: 0.5rem;
+  outline: 0.1875rem solid currentColor;
+  outline-offset: 0.5rem;
+}
+
+.c-guest-teaser--link .c-guest-teaser__name a:focus-visible {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-guest-teaser__photo img {
+    transition: none;
+  }
+
+  .c-guest-teaser--link:hover .c-guest-teaser__photo img,
+  .c-guest-teaser--link:focus-within .c-guest-teaser__photo img {
+    transform: none;
+  }
+}

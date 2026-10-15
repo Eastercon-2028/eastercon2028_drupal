@@ -1,0 +1,61 @@
+uuid: 10a44403-8fc9-4301-b811-770c0b567f47
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - options
+  theme:
+    - contract
+active_version: 920172afa04aca58
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        name:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Adam Roberts'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+        heading_level:
+          required: false
+          field_type: list_integer
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: 3
+          expression: ℹ︎list_integer␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        photo:
+          title: Photo
+          description: "The guest's photo. It is cropped to a circle, so a square image works best."
+label: 'Guest teaser'
+id: sdc.contract.guest_teaser
+provider: contract
+source: sdc
+source_local_id: 'contract:guest_teaser'

@@ -1,0 +1,29 @@
+uuid: b83e0601-21b4-4d77-ab07-6eb16c9eea5a
+langcode: en
+status: true
+dependencies: {  }
+id: conreg_registration_1_I
+label: 'ConReg: registration (event 1, type I)'
+key: null
+recipient: {  }
+cc: {  }
+bcc: {  }
+fromName: null
+fromAddress: null
+replyToAddress: null
+subject: 'Thank you for joining [event_name]'
+inboxPreview: null
+bodyHtml:
+  value: '<p>Hi [first_name],</p><p>This is to confirm you have joined [event_name].</p><p>Your member details are:</p><p>[member_details]</p><p>Your payment reference is [payment_id].</p><p>If you would like to upgrade your membership type, please visit our member portal by clicking on this link:&nbsp;[login_url]</p><p>Best wishes,<br>The [event_name] team.</p>'
+  format: full_html
+bodyPlain: null
+generateBodyPlain: false
+attachment: {  }
+saveAttachment: null
+attachmentScheme: null
+attachmentDirectory: null
+saveEmail: true
+allowSavingEmail: true
+purgeEmails: false
+purgeInterval: null
+purgePeriod: days

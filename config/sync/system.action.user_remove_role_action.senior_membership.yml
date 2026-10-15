@@ -1,0 +1,14 @@
+uuid: ed9dc991-e57d-4503-a55c-e68a13ceeb85
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.senior_membership
+  module:
+    - user
+id: user_remove_role_action.senior_membership
+label: 'Remove the Senior Membership role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: senior_membership

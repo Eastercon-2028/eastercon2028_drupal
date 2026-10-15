@@ -1,0 +1,72 @@
+uuid: 0853e483-bbba-41c0-9bbd-c7940e87e9de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.guest.field_bio
+    - field.field.node.guest.field_book_covers
+    - field.field.node.guest.field_byline
+    - field.field.node.guest.field_links
+    - field.field.node.guest.field_photo
+    - node.type.guest
+  module:
+    - link
+    - text
+    - user
+id: node.guest.default
+targetEntityType: node
+bundle: guest
+mode: default
+content:
+  field_bio:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_book_covers:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_byline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  field_links:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_photo:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

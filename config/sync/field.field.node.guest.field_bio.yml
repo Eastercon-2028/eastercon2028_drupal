@@ -1,0 +1,24 @@
+uuid: fff9d05c-e750-459e-8d63-f84be4fd1f47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bio
+    - node.type.guest
+  module:
+    - text
+id: node.guest.field_bio
+field_name: field_bio
+entity_type: node
+bundle: guest
+label: Bio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

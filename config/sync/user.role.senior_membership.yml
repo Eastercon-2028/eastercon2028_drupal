@@ -1,0 +1,28 @@
+uuid: 699b8885-8ef0-4932-b7fe-a0e5bda78cd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.simplenews_issue
+  module:
+    - conreg
+    - conreg_badges
+    - navigation
+    - node
+    - simplenews
+    - system
+id: senior_membership
+label: 'Senior Membership'
+weight: 5
+is_admin: false
+permissions:
+  - 'access navigation'
+  - 'configure convention email templates'
+  - 'configure convention registration'
+  - 'create simplenews_issue content'
+  - 'edit any simplenews_issue content'
+  - 'send newsletter'
+  - 'view membership badges'
+  - 'view membership badges member type'
+  - 'view simplenews_issue revisions'
+  - 'view the administration theme'

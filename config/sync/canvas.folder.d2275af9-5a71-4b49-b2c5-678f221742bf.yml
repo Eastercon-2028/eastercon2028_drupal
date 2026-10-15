@@ -1,0 +1,33 @@
+uuid: d2275af9-5a71-4b49-b2c5-678f221742bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.mercury.anchor
+    - canvas.component.sdc.mercury.badge
+    - canvas.component.sdc.mercury.blockquote
+    - canvas.component.sdc.mercury.button
+    - canvas.component.sdc.mercury.heading
+    - canvas.component.sdc.mercury.icon
+    - canvas.component.sdc.mercury.image
+    - canvas.component.sdc.mercury.text
+    - canvas.component.sdc.mercury.video
+    - canvas.component.sdc.registration_canvas_theme.button
+    - canvas.component.sdc.registration_canvas_theme.heading
+    - canvas.component.sdc.registration_canvas_theme.text
+name: Base
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.mercury.anchor
+  - sdc.mercury.badge
+  - sdc.mercury.blockquote
+  - sdc.mercury.button
+  - sdc.mercury.heading
+  - sdc.mercury.icon
+  - sdc.mercury.image
+  - sdc.mercury.text
+  - sdc.mercury.video
+  - sdc.registration_canvas_theme.button
+  - sdc.registration_canvas_theme.heading
+  - sdc.registration_canvas_theme.text

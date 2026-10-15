@@ -1,0 +1,30 @@
+uuid: 44a821c0-9f5f-4969-b359-1f379d2ac614
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.simplenews_issue.field_content
+    - field.field.node.simplenews_issue.simplenews_issue
+    - node.type.simplenews_issue
+  module:
+    - text
+    - user
+id: node.simplenews_issue.default
+targetEntityType: node
+bundle: simplenews_issue
+mode: default
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  simplenews_issue: true

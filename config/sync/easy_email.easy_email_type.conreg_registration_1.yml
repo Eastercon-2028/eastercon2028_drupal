@@ -1,0 +1,29 @@
+uuid: 93e5580c-02c2-487a-aaff-96a00613f0cd
+langcode: en
+status: true
+dependencies: {  }
+id: conreg_registration_1
+label: 'ConReg: registration (event 1)'
+key: null
+recipient: {  }
+cc: {  }
+bcc: {  }
+fromName: null
+fromAddress: null
+replyToAddress: null
+subject: 'Thank you for joining [event_name]'
+inboxPreview: null
+bodyHtml:
+  value: '<p>Hi [first_name],</p><p>This is to confirm you have joined [event_name].</p><h2>Member details</h2><p>[member_details]</p><p>Your payment reference is [payment_id].</p><p>If you would like to upgrade your membership type, please visit our member portal by clicking on this link:&nbsp;[login_url]</p><h2>Hotel booking</h2><p>Your membership does not include a hotel booking. However, we have negotiated competitive rates for the convention hotel - the <a href="https://www.hilton.com/en/hotels/lonmetw-hilton-london-metropole/">Hilton Birmingham Metropole</a> - for convention members.</p><p>The convention rates are available for stays from 2nd to 7th April 2025 inclusive.</p><p><strong>Including breakfast</strong><br>£142 per night for a double room including breakfast.<br>£99 per night for single room including breakfast.<br><a href="https://eventsathilton.com/show/68877993f60dd31d66455024">Book room and breakfast</a></p><p><strong>Room only</strong><br>£132 per night for a double room, room only.<br>£94 per night for single room, room only.<br><a href="https://eventsathilton.com/show/68877a01f60dd31d6645502b">Book a room only (without breakfast)</a></p><p>The first night is a non-refundable deposit in line with Hilton''s requirements.&nbsp;You will not be charged for making amendments to your reservation but late cancellation or not showing up to take up your booking means that you would be charged. This is standard Hilton policy.</p><p>This links are for convention members only. Please don’t share it with non-members.</p><p><strong>Access needs</strong></p><p>If you have access needs then there is a free text field where you can highlight your specific access needs. &nbsp;</p><p>The hotel has 21 fully accessible hotel rooms and will also be able to accommodate other needs on request. Please don’t worry if you aren’t able to book your accommodation during the priority period. We are confident there are sufficient accessible rooms for members’ needs. If you''ve access concerns please email <a href="mailto:access@eastercon2028.org.uk">access@eastercon2028.org.uk</a></p><p>If you have questions please contact us at <a href="https://info@eastercon2028.org.uk">info@eastercon2028.org.uk </a>and we will do our best to help you. The Hilton are also very supportive and have a good range of information on their website and<a href="https://www.hilton.com/en/hotels/bhxmetw-hilton-birmingham-metropole/amenities/"> policies page.</a></p><p><strong>Parking</strong></p><p>The convention has secured a reduced rate for parking of £14 per night. This can be paid in advance using the code BQGZX via the<a href="https://www.bhmparking.co.uk/"> parking portal </a>closer to the time, or at any point during your stay. There will be QR codes distributed around the venue which will also enable you to pay for parking.</p><p>There is no additional discount for blue badge holders.</p><p>&nbsp;</p><p>Best wishes,<br>The [event_name] team.</p>'
+  format: full_html
+bodyPlain: null
+generateBodyPlain: false
+attachment: {  }
+saveAttachment: null
+attachmentScheme: null
+attachmentDirectory: null
+saveEmail: true
+allowSavingEmail: true
+purgeEmails: false
+purgeInterval: null
+purgePeriod: days

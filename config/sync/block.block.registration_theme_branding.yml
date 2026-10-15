@@ -1,0 +1,25 @@
+uuid: 78ab8c25-4478-46f1-b65d-9f54e66f0e67
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - registration_theme
+_core:
+  default_config_hash: rjdTn7pKoPsJtkF9_2ly0PnyOKLFRhFecKHhvcnAnI8
+id: registration_theme_branding
+theme: registration_theme
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

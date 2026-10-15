@@ -1,0 +1,10 @@
+uuid: 1c06c6a8-e659-4bc2-b6e9-7cfef505c024
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: NlaaiQOSf0HWxoknAbNx3SkNkB3KuiVaH-qqdkZcmQY
+id: top-tasks
+label: 'Top tasks'
+description: 'Things users can do when they start using Drupal CMS.'
+locked: false

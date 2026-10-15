@@ -1,0 +1,63 @@
+{#
+/**
+ * @file
+ * Guest profile component.
+ *
+ * The name uses the heading component, so it gets the highlighted opening
+ * word and, in the Contract theme, the heading motion.
+ *
+ * Canvas can map a multi-value link field to arrays of strings, but not to an
+ * array of objects, so the links arrive as two lists, paired up by position.
+ */
+#}
+{% set links = [] %}
+{% for url in link_urls|default([]) %}
+  {% if url is not empty %}
+    {% set links = links|merge([{url: url, title: link_titles[loop.index0]|default(url)}]) %}
+  {% endif %}
+{% endfor %}
+
+<article{{ attributes.addClass('c-guest-profile') }}>
+  {% include 'registration_canvas_theme:heading' with {
+    heading_text: name,
+    level: heading_level in [1, 2, 3, 4, 5, 6] ? heading_level : 1,
+    text_size: 'default',
+    text_color: 'default',
+    align: 'left',
+    attributes: create_attribute({'class': ['c-guest-profile__name']}),
+  } only %}
+  {% if byline is not empty %}
+    <p class="c-guest-profile__byline">{{ byline }}</p>
+  {% endif %}
+
+  <div class="c-guest-profile__body">
+    {% if photo.src is not empty %}
+      <div class="c-guest-profile__photo">
+        {% include 'canvas:image' ignore missing with {
+          src: photo.src,
+          alt: photo.alt,
+          width: photo.width,
+          height: photo.height,
+          sizes: '15rem',
+          loading: 'eager',
+        } only %}
+      </div>
+    {% endif %}
+    <div class="c-guest-profile__bio">
+      {% block bio %}{{ bio }}{% endblock %}
+    </div>
+  </div>
+
+  {% if links is not empty %}
+    <section class="c-guest-profile__links">
+      {% if links_heading is not empty %}
+        <h2 class="c-guest-profile__links-heading">{{ links_heading }}</h2>
+      {% endif %}
+      <ul>
+        {% for link in links %}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+</article>

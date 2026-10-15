@@ -1,0 +1,13 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: 1
+logo:
+  use_default: 0
+  path: 'public://logo_website_0.png'
+favicon:
+  use_default: 0
+  path: 'public://favicon_0.ico'
+  mimetype: image/vnd.microsoft.icon
+scheme: null

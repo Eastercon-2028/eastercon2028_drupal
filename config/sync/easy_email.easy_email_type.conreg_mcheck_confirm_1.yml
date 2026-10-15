@@ -1,0 +1,29 @@
+uuid: 3f2b2670-674a-4d54-b22f-5657f8414baf
+langcode: en
+status: true
+dependencies: {  }
+id: conreg_mcheck_confirm_1
+label: 'ConReg: member found (event 1)'
+key: null
+recipient: {  }
+cc: {  }
+bcc: {  }
+fromName: null
+fromAddress: null
+replyToAddress: null
+subject: 'Your [event_name] Membership Status'
+inboxPreview: null
+bodyHtml:
+  value: '<p>Hi [first_name],</p><p>This is to confirm your membership status for [event_name].</p><p>Your member details are:</p><p>[member_details]</p><p>You can check membership details and upgrade from supporting to attending membership in our member portal at: [login_url]</p><p>Best wishes,</p><p>The [event_name] team.</p>'
+  format: full_html
+bodyPlain: null
+generateBodyPlain: false
+attachment: {  }
+saveAttachment: null
+attachmentScheme: null
+attachmentDirectory: null
+saveEmail: true
+allowSavingEmail: true
+purgeEmails: false
+purgeInterval: null
+purgePeriod: days

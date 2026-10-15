@@ -1,0 +1,60 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Guest card
+description: A guest's name as a heading and a byline, then their photo in a circle beside a summary of their biography, and a "Read more" link. The Guests view renders each guest with it (via Views Row SDC).
+group: Card
+status: stable
+props:
+  type: object
+  required:
+    - name
+  properties:
+    name:
+      type: string
+      title: Name
+      examples:
+        - Adam Roberts
+    byline:
+      type: string
+      title: Byline
+      description: A few words about the guest, shown under their name.
+      examples:
+        - Academic and author
+    url:
+      type: string
+      title: Link
+      description: The guest's page. The name and "Read more" link to it.
+      format: uri-reference
+    heading_level:
+      type: integer
+      title: Heading level
+      description: The level of the name's heading. Use 3 when the cards sit under a heading of their own.
+      enum: [2, 3, 4, 5, 6]
+      default: 2
+      examples:
+        - 2
+    photo_position:
+      type: string
+      title: Photo position
+      description: Which side of the summary the photo is on. "Alternate" puts it on the left of odd cards in a list and the right of even ones. On a narrow card, the photo is always above the summary.
+      enum: [left, right, alternate]
+      meta:enum:
+        left: Left
+        right: Right
+        alternate: Alternate
+      default: left
+      examples:
+        - left
+    separator:
+      type: boolean
+      title: Separator
+      description: Draw a line between this card and the one before it in a list. The line is solid in the middle and breaks into shorter and shorter dashes towards each end.
+      default: false
+      examples:
+        - false
+slots:
+  photo:
+    title: Photo
+    description: The guest's photo. It is cropped to a circle, so a square image works best.
+  summary:
+    title: Summary
+    description: A short biography.

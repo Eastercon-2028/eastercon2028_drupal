@@ -1,0 +1,29 @@
+uuid: b0ca18b1-bd5e-4d16-875c-3a0a73919e9a
+langcode: en
+status: true
+dependencies: {  }
+id: conreg_mcheck_unknown_1
+label: 'ConReg: member not found (event 1)'
+key: null
+recipient: {  }
+cc: {  }
+bcc: {  }
+fromName: null
+fromAddress: null
+replyToAddress: null
+subject: 'Your [event_name] Membership Status'
+inboxPreview: null
+bodyHtml:
+  value: '<p>Hi,</p><p>Thank you for checking your membership status for [event_name].</p><p>Unfortunately, we can find no entry for this email address. If you think this is incorrect, please contact us.</p><p>Best wishes,</p><p>The [event_name] team.</p>'
+  format: full_html
+bodyPlain: null
+generateBodyPlain: false
+attachment: {  }
+saveAttachment: null
+attachmentScheme: null
+attachmentDirectory: null
+saveEmail: true
+allowSavingEmail: true
+purgeEmails: false
+purgeInterval: null
+purgePeriod: days

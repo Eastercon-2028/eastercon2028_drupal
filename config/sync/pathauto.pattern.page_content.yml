@@ -1,0 +1,26 @@
+uuid: a8588316-ae29-463f-9f3e-37dd5378252d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  enforced:
+    config:
+      - node.type.page
+_core:
+  default_config_hash: PwN-6FECzX-I2BgjWwKS0ldz50CTMTnE3E6M5vvm0P0
+id: page_content
+label: 'Page content'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  425d6456-71e3-4b65-9302-6c695efaab28:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      page: page
+selection_logic: and
+weight: -5
+relationships: {  }

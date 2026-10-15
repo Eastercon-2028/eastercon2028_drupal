@@ -1,0 +1,26 @@
+uuid: 382de785-c7d2-41d4-b34c-ead5742b7318
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.guests
+  module:
+    - views
+active_version: f1ba0fd3ac225cf7
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:guests-block_2'
+        label: 'Guests teaser'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Guests teaser'
+id: block.views_block.guests-block_2
+provider: views
+source: block
+source_local_id: 'views_block:guests-block_2'

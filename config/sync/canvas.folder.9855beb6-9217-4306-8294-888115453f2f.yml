@@ -1,0 +1,27 @@
+uuid: 9855beb6-9217-4306-8294-888115453f2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.contract.guest_card
+    - canvas.component.sdc.contract.guest_profile
+    - canvas.component.sdc.contract.guest_teaser
+    - canvas.component.sdc.mercury.card
+    - canvas.component.sdc.mercury.card-icon
+    - canvas.component.sdc.mercury.card-logo
+    - canvas.component.sdc.mercury.card-pricing
+    - canvas.component.sdc.mercury.card-testimonial
+    - canvas.component.sdc.registration_canvas_theme.card-logo
+name: Card
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.contract.guest_card
+  - sdc.contract.guest_profile
+  - sdc.contract.guest_teaser
+  - sdc.mercury.card
+  - sdc.mercury.card-icon
+  - sdc.mercury.card-logo
+  - sdc.mercury.card-pricing
+  - sdc.mercury.card-testimonial
+  - sdc.registration_canvas_theme.card-logo

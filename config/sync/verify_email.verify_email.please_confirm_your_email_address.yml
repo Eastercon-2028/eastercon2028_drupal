@@ -1,0 +1,12 @@
+uuid: 029e697f-7acd-4575-b0d6-bdf231ef71cb
+langcode: en
+status: true
+dependencies: {  }
+id: please_confirm_your_email_address
+label: 'Please confirm your email address'
+path: /register
+intro: 'To begin registration for Contract, please enter your email below. We will send you a link to securely log you in so you can complete the registration process.'
+email_subject: 'Your login link for Contract 2028'
+email_body: "We received a request for access to register for Contract, the 2028 Eastercon. If this was not initiated by you, please accept our apologies and ignore this email.\r\n\r\nIf you would like to register for Contract, please click the link below.\r\n\r\n[verify-email:url]"
+thank_you_body: 'Please check your email and click on the included link to verify your email address.'
+redirect_path: /members/register

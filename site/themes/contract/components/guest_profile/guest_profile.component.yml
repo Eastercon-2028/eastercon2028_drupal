@@ -1,0 +1,67 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Guest profile
+description: A guest's full page. Their name as a heading and a byline, then their photo in a circle beside their biography, then a list of links. The Guest content template uses it.
+group: Card
+status: stable
+props:
+  type: object
+  required:
+    - name
+  properties:
+    name:
+      type: string
+      title: Name
+      examples:
+        - Adam Roberts
+    byline:
+      type: string
+      title: Byline
+      description: A few words about the guest, shown under their name.
+      examples:
+        - Academic and author
+    photo:
+      $ref: json-schema-definitions://canvas.module/image
+      type: object
+      title: Photo
+      description: Cropped to a circle, so a square image, or one with the face in the middle, works best.
+      examples:
+        - src: 'https://placehold.co/400x400'
+          alt: Placeholder photo
+          width: 400
+          height: 400
+    heading_level:
+      type: integer
+      title: Heading level
+      description: The level of the name's heading. On the guest's own page, it is the page title, so 1.
+      enum: [1, 2, 3, 4, 5, 6]
+      default: 1
+      examples:
+        - 1
+    links_heading:
+      type: string
+      title: Links heading
+      description: Shown above the links. Leave empty for no heading.
+      default: Links
+      examples:
+        - Links
+    link_urls:
+      type: array
+      title: Link URLs
+      description: The links' addresses. Map this and Link titles to the same link field; each title is paired with the URL in the same position.
+      items:
+        type: string
+        format: uri-reference
+      examples:
+        - - 'https://www.drupal.org'
+    link_titles:
+      type: array
+      title: Link titles
+      description: The links' text. A link without a title shows its URL.
+      items:
+        type: string
+      examples:
+        - - Drupal
+slots:
+  bio:
+    title: Biography
+    description: The guest's biography, beside the photo.

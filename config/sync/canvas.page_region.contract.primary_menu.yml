@@ -1,0 +1,33 @@
+uuid: d6f7ce2e-59b7-421a-8517-d0825468f9d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.system_menu_block.main
+    - canvas.component.sdc.registration_canvas_theme.navbar
+  module:
+    - options
+  theme:
+    - contract
+id: contract.primary_menu
+region: primary_menu
+theme: contract
+component_tree:
+  '0:90b5b9b6-7fbd-4ba5-b052-70a09ca59363':
+    uuid: 90b5b9b6-7fbd-4ba5-b052-70a09ca59363
+    component_id: sdc.registration_canvas_theme.navbar
+    component_version: a17776a01a0c76b4
+    inputs:
+      menu_align: center
+  '0:navigation:0:b142101b-dcaa-4095-8da7-5423c1d5b575':
+    parent_uuid: 90b5b9b6-7fbd-4ba5-b052-70a09ca59363
+    slot: navigation
+    uuid: b142101b-dcaa-4095-8da7-5423c1d5b575
+    component_id: block.system_menu_block.main
+    component_version: 023ff7ba63f80798
+    inputs:
+      label: 'Main navigation'
+      label_display: '0'
+      level: 1
+      depth: null
+      expand_all_items: false

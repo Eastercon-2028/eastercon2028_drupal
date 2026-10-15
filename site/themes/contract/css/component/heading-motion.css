@@ -1,0 +1,59 @@
+/**
+ * @file
+ * Headings slide in like the logo's "CON" and "tract".
+ *
+ * As each heading with a highlighted start (.c-heading__lead) scrolls into
+ * view, the italic rest slides in from the right and the lead from the left,
+ * meeting in place. Only the heading and the lead span are moved, so it works
+ * whatever the rest contains (links, emphasis) and needs no extra markup:
+ * the heading travels in from +distance, and the lead, which moves with it,
+ * travels a further -2 x distance, so it starts at -distance overall.
+ *
+ * Active only when js/heading-motion-init.js has put
+ * .contract-heading-motion on <html> (JavaScript on, IntersectionObserver
+ * available, reduced motion not requested). js/heading-motion.js adds
+ * .is-revealed to each heading as it comes into view, and staggers headings
+ * revealed together through --contract-heading-motion-delay. While delayed, a
+ * heading holds its starting (hidden) frame.
+ */
+
+:root {
+  --contract-heading-motion-distance: 2.5em;
+  --contract-heading-motion-duration: 0.8s;
+  --contract-heading-motion-easing: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Hidden until revealed. The same selectors that give these headings the
+   * heading look in registration_canvas_theme's base.css. */
+  .contract-heading-motion :is(h1, h2, h3, h4, h5, h6, #regform legend .fieldset-legend):has(.c-heading__lead):not(.is-revealed) {
+    opacity: 0;
+  }
+
+  /* A transform needs a box; the lead is a single word, so this does not
+   * change how the heading wraps. */
+  .contract-heading-motion .c-heading__lead {
+    display: inline-block;
+  }
+
+  .contract-heading-motion .is-revealed {
+    animation: contract-heading-rest var(--contract-heading-motion-duration) var(--contract-heading-motion-easing) var(--contract-heading-motion-delay, 0s) both;
+  }
+
+  .contract-heading-motion .is-revealed .c-heading__lead {
+    animation: contract-heading-lead var(--contract-heading-motion-duration) var(--contract-heading-motion-easing) var(--contract-heading-motion-delay, 0s) both;
+  }
+}
+
+@keyframes contract-heading-rest {
+  from {
+    opacity: 0;
+    transform: translateX(var(--contract-heading-motion-distance));
+  }
+}
+
+@keyframes contract-heading-lead {
+  from {
+    transform: translateX(calc(-2 * var(--contract-heading-motion-distance)));
+  }
+}

@@ -4,8 +4,11 @@ base theme: registration_canvas_theme
 description: Theme for Contract, Eastercon 2028. Brand colours, fonts, logo and Contract-only components on top of Registration Canvas Theme.
 package: Custom
 core_version_requirement: ^11
+dependencies:
+  - heading_splitter:heading_splitter
 libraries:
   - contract/global
+  - contract/heading-motion
 regions:
   content: Content
   header: Header

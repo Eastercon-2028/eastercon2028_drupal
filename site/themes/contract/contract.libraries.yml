@@ -24,3 +24,21 @@ global:
       css/layout/layout.css: {}
     theme:
       css/theme/print.css: { media: print }
+
+# Headings slide in like the logo. The init script is in the head so headings
+# are hidden before first paint; see css/component/heading-motion.css.
+heading-motion-init:
+  header: true
+  js:
+    js/heading-motion-init.js: {}
+
+heading-motion:
+  js:
+    js/heading-motion.js: {}
+  css:
+    component:
+      css/component/heading-motion.css: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - contract/heading-motion-init

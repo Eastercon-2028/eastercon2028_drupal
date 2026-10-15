@@ -1,0 +1,10 @@
+filter_settings.heading_splitter_lead:
+  type: filter
+  label: 'Highlight the start of headings'
+  mapping:
+    levels:
+      type: sequence
+      label: 'Heading levels'
+      sequence:
+        type: integer
+        label: 'Level'

@@ -1,0 +1,8 @@
+uuid: 0aee4938-930c-4347-a9fc-2cae82a3936c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Project Browser'
+configEntityTypeId: component
+weight: 0
+items: {  }

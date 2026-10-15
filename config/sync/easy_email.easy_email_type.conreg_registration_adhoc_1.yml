@@ -1,0 +1,29 @@
+uuid: 02f20d9e-cec3-42b8-8d35-8b195a81aa68
+langcode: en
+status: true
+dependencies: {  }
+id: conreg_registration_adhoc_1
+label: 'ConReg: ad hoc template 1'
+key: null
+recipient: {  }
+cc: {  }
+bcc: {  }
+fromName: null
+fromAddress: null
+replyToAddress: null
+subject: 'Thank you for joining [event_name]'
+inboxPreview: null
+bodyHtml:
+  value: '<p>Hi [first_name],</p><p>This is to confirm you have joined [event_name].</p><p>Your member details are:</p><p>[member_details]</p><p>Membership type:&nbsp;[member_type]</p><p>Your payment reference is&nbsp;[payment_id].</p><p>You can check your membership or choose to upgrade it through our membership portal: [login_url]</p><p>Best wishes,</p><p>The [event_name] team.</p>'
+  format: full_html
+bodyPlain: null
+generateBodyPlain: false
+attachment: {  }
+saveAttachment: null
+attachmentScheme: null
+attachmentDirectory: null
+saveEmail: true
+allowSavingEmail: true
+purgeEmails: false
+purgeInterval: null
+purgePeriod: days

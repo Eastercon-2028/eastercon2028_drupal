@@ -1,0 +1,49 @@
+{#
+/**
+ * @file
+ * Guest card component.
+ *
+ * The name uses the heading component, so it gets the highlighted opening
+ * word and, in the Contract theme, the heading motion.
+ *
+ * Views Row SDC passes a slot as markup even when its field is empty, so the
+ * slots are checked by their rendered output.
+ */
+#}
+{% set has_photo = photo|render|trim is not empty %}
+{% set has_summary = summary|render|trim is not empty %}
+{% set classes = [
+  'c-guest-card',
+  'c-guest-card--photo-' ~ (photo_position in ['left', 'right', 'alternate'] ? photo_position : 'left'),
+  separator ? 'c-guest-card--separated',
+] %}
+
+<article{{ attributes.addClass(classes) }}>
+  {% include 'registration_canvas_theme:heading' with {
+    heading_text: name,
+    level: heading_level in [2, 3, 4, 5, 6] ? heading_level : 2,
+    text_size: 'default',
+    text_color: 'default',
+    align: 'left',
+    url: url|default(''),
+    attributes: create_attribute({'class': ['c-guest-card__name']}),
+  } only %}
+  {% if byline is not empty %}
+    <p class="c-guest-card__byline">{{ byline }}</p>
+  {% endif %}
+  {% if has_photo or has_summary %}
+    <div class="c-guest-card__body">
+      {% if has_photo %}
+        <div class="c-guest-card__photo">{{ photo }}</div>
+      {% endif %}
+      {% if has_summary %}
+        <div class="c-guest-card__summary">{{ summary }}</div>
+      {% endif %}
+    </div>
+  {% endif %}
+  {% if url is not empty %}
+    <p class="c-guest-card__more">
+      <a href="{{ url }}">{{ 'Read more<span class="visually-hidden"> about @name</span>…'|t({'@name': name}) }}</a>
+    </p>
+  {% endif %}
+</article>

@@ -1,0 +1,12 @@
+services:
+  heading_splitter.splitter:
+    class: Drupal\heading_splitter\HeadingSplitter
+  heading_splitter.twig_extension:
+    class: Drupal\heading_splitter\Twig\HeadingExtension
+    arguments: ['@heading_splitter.splitter']
+    tags:
+      - { name: twig.extension }
+  heading_splitter.highlighter:
+    class: Drupal\heading_splitter\HeadingHighlighter
+    arguments: ['@heading_splitter.splitter']
+  Drupal\heading_splitter\HeadingHighlighter: '@heading_splitter.highlighter'

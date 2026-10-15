@@ -1,0 +1,11 @@
+uuid: 9801d686-c766-464d-ba0c-14ab9757a08a
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.events_block
+name: Drupical
+configEntityTypeId: component
+weight: 0
+items:
+  - block.events_block

@@ -1,0 +1,22 @@
+uuid: 2b5eb3a0-73d0-4e42-94ce-7814bc4e19c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.system_branding_block
+  theme:
+    - contract
+id: contract.header
+region: header
+theme: contract
+component_tree:
+  '0:2fdc307c-819f-4bf4-922a-789900327f40':
+    uuid: 2fdc307c-819f-4bf4-922a-789900327f40
+    component_id: block.system_branding_block
+    component_version: b168140fdcaebae5
+    inputs:
+      label: 'Site branding'
+      label_display: '0'
+      use_site_logo: true
+      use_site_name: false
+      use_site_slogan: false

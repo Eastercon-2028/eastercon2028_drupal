@@ -1,0 +1,10 @@
+label_size: standard_address
+copies: 1
+name_lines: 2
+suppress_printing: false
+retention_days: 30
+field_positions:
+  badge_name: middle
+  member_number: bottom_left
+  days_attending: bottom_right
+  badge_type: none

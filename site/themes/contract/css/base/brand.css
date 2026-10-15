@@ -31,3 +31,21 @@
    * thin outline in the same blue brings it to a matching weight. */
   --c-heading-lead-stroke: 0.03em;
 }
+
+/* Contract's versions of the background colour pairs (.c-bg--*) defined in
+ * registration_canvas_theme's css/base.css. That file loads after this one,
+ * so these rules start with "html" to outrank its rules wherever they load.
+ *
+ * The "Primary" background is the logo's blue, rather than the theme's
+ * primary colour (used for buttons and links), which is a different shade.
+ * White text on it has a contrast ratio of 4.7:1, which passes WCAG AA. */
+html .c-bg--primary {
+  --c-bg: var(--contract-blue);
+}
+
+/* On a blue background the blue heading lead would all but disappear, so
+ * there it takes the background's text colour. */
+html .c-bg--primary,
+html .c-bg--accent {
+  --c-heading-lead-color: var(--c-fg);
+}

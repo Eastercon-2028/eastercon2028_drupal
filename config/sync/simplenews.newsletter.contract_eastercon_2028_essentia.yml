@@ -1,0 +1,20 @@
+uuid: 67039808-b109-4c76-9d1a-a23a69d0321e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Contract Eastercon 2028 essential updates'
+id: contract_eastercon_2028_essentia
+description: 'Newsletter for essential updates about Contract - Eastercon 2028'
+format: html
+priority: 0
+receipt: true
+from_name: 'Contract - Eastercon 2028'
+subject: '[[simplenews-newsletter:name]] [node:title]'
+from_address: info@eastercon2028.org.uk
+hyperlinks: true
+allowed_handlers:
+  simplenews_all: '0'
+new_account: none
+access: default
+reason: ''
+weight: 0

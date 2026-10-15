@@ -1,0 +1,14 @@
+uuid: a0fe21b5-1540-4f9f-8661-edcfc1265416
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.senior_membership
+  module:
+    - user
+id: user_add_role_action.senior_membership
+label: 'Add the Senior Membership role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: senior_membership

@@ -1,0 +1,11 @@
+uuid: 2244b3c0-def3-44a5-b769-85d7f9f950f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.views_block.recent_pages-block_recent_pages
+name: 'Lists (Views)'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.views_block.recent_pages-block_recent_pages

@@ -1,0 +1,19 @@
+uuid: ef4907f0-914a-4aea-8bac-6d27a982125f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_byline
+    - node.type.guest
+id: node.guest.field_byline
+field_name: field_byline
+entity_type: node
+bundle: guest
+label: Byline
+description: 'A few words shown under the guest’s name, such as “Academic and author”.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

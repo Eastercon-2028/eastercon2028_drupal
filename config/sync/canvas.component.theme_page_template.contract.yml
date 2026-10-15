@@ -1,0 +1,61 @@
+uuid: 02ea66a3-1dfa-421b-aea8-cd6c9c7cd067
+langcode: en
+status: true
+dependencies:
+  module:
+    - canvas_page_template_component
+active_version: 4e198934930cbd40
+versioned_properties:
+  active:
+    settings: {  }
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'The Content region.'
+          examples:
+            - ''
+        header:
+          title: Header
+          description: 'The Header region.'
+          examples:
+            - ''
+        primary_menu:
+          title: 'Primary menu'
+          description: 'The Primary menu region.'
+          examples:
+            - ''
+        footer:
+          title: Footer
+          description: 'The Footer region.'
+          examples:
+            - ''
+  15fe1e06320b1035:
+    settings: {  }
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'The Content region.'
+          examples:
+            - ''
+        header:
+          title: Header
+          description: 'The Header region.'
+          examples:
+            - ''
+        primary_menu:
+          title: 'Primary menu'
+          description: 'The Primary menu region.'
+          examples:
+            - ''
+        footer:
+          title: Footer
+          description: 'The Footer region.'
+          examples:
+            - ''
+label: 'Contract page template'
+id: theme_page_template.contract
+provider: canvas_page_template_component
+source: theme_page_template
+source_local_id: contract

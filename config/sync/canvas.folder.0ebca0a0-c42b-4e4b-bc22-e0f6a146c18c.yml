@@ -1,0 +1,13 @@
+uuid: 0ebca0a0-c42b-4e4b-bc22-e0f6a146c18c
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.views_block.guests-block_1
+    - canvas.component.block.views_block.guests-block_2
+name: Contract
+configEntityTypeId: component
+weight: 0
+items:
+  - block.views_block.guests-block_1
+  - block.views_block.guests-block_2

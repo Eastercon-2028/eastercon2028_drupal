@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * The text of a heading, with its start in a span styled by css/base/brand.css.
+ *
+ * Overrides Registration Canvas Theme's version, which takes the first word,
+ * with the heading_lead filter from the heading_splitter module: the first
+ * word or syllable ("ADAM Roberts", "REGistration").
+ *
+ * Available variables:
+ * - text: the heading, as plain text.
+ * - highlight: whether to wrap the start in <span class="c-heading__lead">.
+ */
+#}
+{{- highlight ? text|heading_lead : text -}}

@@ -1,0 +1,23 @@
+uuid: dedcb18c-1bf7-401d-ade4-6bdb280fb4be
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.guest
+  module:
+    - node
+id: guest_content
+label: 'Guest content'
+type: 'canonical_entities:node'
+pattern: '/guest/[node:title]'
+selection_criteria:
+  6264841c-57d7-430c-b557-c81b01d3918c:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      guest: guest
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -3,6 +3,14 @@
  * Hero with logo. The background image and colour run full-bleed.
  */
 
+/* registration_theme pads the top of the content to space it from the
+ * header. When the hero comes first (the page title block before it is
+ * empty), that shows as a white band between the header and the image, so
+ * drop the padding and let the hero meet the header. */
+.layout-content:has(> .region-content:first-child > :is(.c-hero-logo:first-child, .block-page-title-block:first-child + .c-hero-logo)) {
+  padding-top: 0;
+}
+
 .c-hero-logo {
   position: relative;
   isolation: isolate;

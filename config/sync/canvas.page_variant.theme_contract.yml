@@ -1,0 +1,70 @@
+uuid: 42c31c3c-a48d-4e3a-abfd-31eb99224f0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.page_title_block
+    - canvas.component.block.system_branding_block
+    - canvas.component.block.system_menu_block.main
+    - canvas.component.marker.page_content
+    - canvas.component.sdc.registration_canvas_theme.navbar
+    - canvas.component.theme_page_template.contract
+  module:
+    - options
+id: theme_contract
+label: 'Contract theme'
+description: null
+component_tree:
+  2ef6f582-bc15-4a35-b7b9-708f2ce0d63b:
+    uuid: 2ef6f582-bc15-4a35-b7b9-708f2ce0d63b
+    component_id: theme_page_template.contract
+    component_version: 4e198934930cbd40
+    inputs: {  }
+  d28258da-8874-4957-8ebf-4b2d40e8b2d0:
+    parent_uuid: 2ef6f582-bc15-4a35-b7b9-708f2ce0d63b
+    slot: content
+    uuid: d28258da-8874-4957-8ebf-4b2d40e8b2d0
+    component_id: block.page_title_block
+    component_version: 9eea215a62e33427
+    inputs:
+      label: 'Page title'
+      label_display: '0'
+  14c5ace4-f951-418a-a33c-959b285900df:
+    parent_uuid: 2ef6f582-bc15-4a35-b7b9-708f2ce0d63b
+    slot: content
+    uuid: 14c5ace4-f951-418a-a33c-959b285900df
+    component_id: marker.page_content
+    component_version: 3b12c0b99a6caecc
+    inputs: {  }
+  2fdc307c-819f-4bf4-922a-789900327f40:
+    parent_uuid: 2ef6f582-bc15-4a35-b7b9-708f2ce0d63b
+    slot: header
+    uuid: 2fdc307c-819f-4bf4-922a-789900327f40
+    component_id: block.system_branding_block
+    component_version: b168140fdcaebae5
+    inputs:
+      label: 'Site branding'
+      label_display: '0'
+      use_site_logo: true
+      use_site_name: false
+      use_site_slogan: false
+  ef884b46-a386-40bb-bcdf-6bf589ca37db:
+    parent_uuid: 2ef6f582-bc15-4a35-b7b9-708f2ce0d63b
+    slot: primary_menu
+    uuid: ef884b46-a386-40bb-bcdf-6bf589ca37db
+    component_id: sdc.registration_canvas_theme.navbar
+    component_version: a17776a01a0c76b4
+    inputs:
+      menu_align: center
+  b142101b-dcaa-4095-8da7-5423c1d5b575:
+    parent_uuid: ef884b46-a386-40bb-bcdf-6bf589ca37db
+    slot: navigation
+    uuid: b142101b-dcaa-4095-8da7-5423c1d5b575
+    component_id: block.system_menu_block.main
+    component_version: 023ff7ba63f80798
+    inputs:
+      label: 'Main navigation'
+      label_display: '0'
+      level: 1
+      depth: null
+      expand_all_items: true

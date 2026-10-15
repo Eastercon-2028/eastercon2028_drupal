@@ -1,0 +1,22 @@
+uuid: 0be72373-3b7b-43c2-892c-ff295ccb18a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - registration_theme
+_core:
+  default_config_hash: 7XxvX-xijhJ2tsgN3h67NuRiqUk0_agv-G0jBJ8vGEU
+id: registration_theme_messages
+theme: registration_theme
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

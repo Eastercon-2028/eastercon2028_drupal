@@ -1,0 +1,7 @@
+name: 'Heading Splitter'
+type: module
+description: 'Picks out the start of headings (first word or syllable) in a span the theme can style: a heading_lead Twig filter, a text filter, and highlighting of ConReg form headings.'
+package: Custom
+core_version_requirement: ^11
+dependencies:
+  - drupal:filter
