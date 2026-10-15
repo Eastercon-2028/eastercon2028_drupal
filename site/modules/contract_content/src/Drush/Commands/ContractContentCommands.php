@@ -50,9 +50,10 @@ final class ContractContentCommands extends DrushCommands {
       throw new UserAbortException();
     }
     $result = $this->updater->import($dir);
-    $this->logger()->success(dt('Created @created and updated @updated entities.', [
+    $this->logger()->success(dt('Created @created and updated @updated entities (@adopted of them matched by file).', [
       '@created' => $result['created'],
       '@updated' => $result['updated'],
+      '@adopted' => $result['adopted'],
     ]));
   }
 

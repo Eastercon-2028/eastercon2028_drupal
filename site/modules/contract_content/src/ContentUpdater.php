@@ -80,6 +80,13 @@ class ContentUpdater {
    */
   const REVISION_LOG = 'Updated from the contract_content recipe.';
 
+  /**
+   * The UUIDs in the content being imported, by entity type.
+   *
+   * @var array<string, array<string, true>>
+   */
+  protected array $exportedUuids = [];
+
   public function __construct(
     protected Exporter $exporter,
     protected Importer $importer,
@@ -136,17 +143,28 @@ class ContentUpdater {
    * @param string $dir
    *   The recipe's content directory.
    *
-   * @return array{created: int, updated: int}
-   *   How many entities were created and updated.
+   * @return array{created: int, updated: int, adopted: int}
+   *   How many entities were created and updated, and how many of the updated
+   *   ones were matched by file instead of UUID (see adopt()).
    */
   public function import(string $dir): array {
     $content = new Finder($dir);
+    $this->exportedUuids = [];
+    foreach ($content->data as $uuid => $decoded) {
+      $this->exportedUuids[$decoded['_meta']['entity_type']][$uuid] = TRUE;
+    }
 
-    // Note what exists before the core importer creates the rest.
+    // Note what exists before the core importer creates the rest. The data is
+    // in dependency order, so files are adopted before their media and crops.
     $existing = [];
+    $adopted = 0;
     foreach ($content->data as $uuid => $decoded) {
       if ($this->entityRepository->loadEntityByUuid($decoded['_meta']['entity_type'], $uuid)) {
         $existing[$uuid] = TRUE;
+      }
+      elseif ($this->adopt($decoded)) {
+        $existing[$uuid] = TRUE;
+        $adopted++;
       }
     }
 
@@ -169,7 +187,99 @@ class ContentUpdater {
     return [
       'created' => count($content->data) - count($existing),
       'updated' => count($existing),
+      'adopted' => $adopted,
     ];
+  }
+
+  /**
+   * Gives the exported UUID to an existing copy of the same file.
+   *
+   * An image uploaded separately on each site has a different UUID on each,
+   * and core cannot create the exported file because its URI is taken. The
+   * existing file is matched by URI, its media by source file, and its crops
+   * by image and crop type. The match takes the exported UUID, keeping its ID
+   * so that anything using it is unaffected, and is then updated as usual.
+   *
+   * @param array $decoded
+   *   The decoded YAML of an entity whose UUID is not on this site.
+   *
+   * @return bool
+   *   TRUE if an existing entity was given the UUID.
+   */
+  protected function adopt(array $decoded): bool {
+    ['entity_type' => $entity_type_id, 'uuid' => $uuid] = $decoded['_meta'];
+    $values = $decoded['default'] ?? [];
+    $properties = match ($entity_type_id) {
+      'file' => ['uri' => $values['uri'][0]['value'] ?? NULL],
+      'media' => $this->mediaSourceProperties($decoded),
+      'crop' => [
+        'type' => $decoded['_meta']['bundle'] ?? NULL,
+        'entity_type' => $values['entity_type'][0]['value'] ?? NULL,
+        'entity_id' => $this->idOf($values['entity_type'][0]['value'] ?? NULL, $values['entity_id'][0]['uuid'] ?? NULL),
+      ],
+      default => [],
+    };
+    if (!$properties || in_array(NULL, $properties, TRUE)) {
+      return FALSE;
+    }
+
+    $matches = $this->entityTypeManager->getStorage($entity_type_id)->loadByProperties($properties);
+    // Only adopt an unambiguous match, and never one that is itself exported
+    // under its own UUID.
+    if (count($matches) !== 1) {
+      return FALSE;
+    }
+    $entity = reset($matches);
+    assert($entity instanceof ContentEntityInterface);
+    if ($this->isInExport($entity)) {
+      return FALSE;
+    }
+    $entity->set('uuid', $uuid);
+    if ($entity instanceof RevisionableInterface && $entity->getEntityType()->isRevisionable()) {
+      $entity->setNewRevision(FALSE);
+    }
+    $entity->setSyncing(TRUE)->save();
+    return TRUE;
+  }
+
+  /**
+   * The properties identifying a media item by its bundle and source file.
+   *
+   * @param array $decoded
+   *   The decoded YAML of a media item.
+   *
+   * @return array
+   *   Properties for loadByProperties(), or an empty array.
+   */
+  protected function mediaSourceProperties(array $decoded): array {
+    $bundle = $decoded['_meta']['bundle'] ?? NULL;
+    $media_type = $bundle ? $this->entityTypeManager->getStorage('media_type')->load($bundle) : NULL;
+    if (!$media_type) {
+      return [];
+    }
+    $field = $media_type->getSource()->getSourceFieldDefinition($media_type)?->getName();
+    $file_uuid = $field ? ($decoded['default'][$field][0]['entity'] ?? NULL) : NULL;
+    return [
+      'bundle' => $bundle,
+      $field . '.target_id' => $this->idOf('file', $file_uuid),
+    ];
+  }
+
+  /**
+   * The ID of an entity identified by UUID, or NULL.
+   */
+  protected function idOf(?string $entity_type_id, ?string $uuid): int|string|null {
+    if (!$entity_type_id || !$uuid) {
+      return NULL;
+    }
+    return $this->entityRepository->loadEntityByUuid($entity_type_id, $uuid)?->id();
+  }
+
+  /**
+   * Whether this import has its own data for an entity.
+   */
+  protected function isInExport(ContentEntityInterface $entity): bool {
+    return isset($this->exportedUuids[$entity->getEntityTypeId()][$entity->uuid()]);
   }
 
   /**
