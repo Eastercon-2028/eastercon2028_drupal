@@ -8,9 +8,8 @@
  * Aldrich: self-hosted, SIL OFL. Stand-in for Bitwise on the highlighted start
  * of headings. Licence: fonts/Aldrich-OFL.txt.
  *
- * Bitwise: the intended font for the highlighted start, chosen to echo the
- * logo. Its licence is unclear about web use: see the warning above its
- * @font-face before deploying.
+ * Bitwise: the font for the highlighted start, chosen to echo the logo.
+ * Served with the designer's written permission: see its @font-face.
  */
 
 @font-face {
@@ -54,11 +53,9 @@
 }
 
 /* Bitwise (Digital Graphic Labs, 1999): WOFF converted from the original TTF,
- * with its !license.txt beside it. DO NOT DEPLOY until Digital Graphic Labs
- * has given written permission to serve it as a webfont: the licence embedded
- * in the font file forbids distribution, and the zip's !license.txt does not
- * mention web use. If permission is refused, delete fonts/bitwise/ and this
- * rule; the stack in brand.css then falls back to Aldrich. */
+ * with its !license.txt beside it. Served as a webfont with Digital Graphic
+ * Labs' written permission (2026-10). Without the file, the stack in
+ * brand.css falls back to Aldrich. */
 @font-face {
   font-family: Bitwise;
   font-style: normal;

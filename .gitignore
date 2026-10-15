@@ -13,12 +13,6 @@
 /site/default.settings.php
 /site/default.services.yml
 
-# Bitwise font: its licence does not clearly allow web use, so it stays out of
-# the repository (and so off live) until Digital Graphic Labs gives written
-# permission. Without it the headings fall back to Aldrich. Delete this line
-# once permission is given.
-/site/themes/contract/fonts/bitwise/
-
 # Database dumps, Node tooling, and OS files.
 *.sql
 *.sql.gz
