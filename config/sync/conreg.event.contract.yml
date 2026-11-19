@@ -1,5 +1,10 @@
-_core:
-  default_config_hash: 5oGBUrtRgIOtzJoyMmtuLpt8s0BRtL5385xVia348X0
+uuid: 8c7485d8-94f0-4ab0-91be-5254b66d184c
+langcode: en
+status: true
+dependencies: {  }
+id: contract
+label: Contract
+eid: 1
 payments:
   system: Stripe
   mode: Test
@@ -42,6 +47,8 @@ member_upgrades:
 member_no_digits: '4'
 registration_intro: '<div>Please select the number of members and enter details below. You will then be taken to our payment partner, Stripe, to securely process your payment.</div>'
 payment_intro: ''
+closed_message_text: ''
+closed_message_format: content_format
 communications_method:
   options:
     - 'E|All communications'
@@ -62,6 +69,9 @@ member_listing_page:
   deduplicate: false
 display:
   page_size: 30
+discount:
+  enable: false
+  free_every: null
 add-ons:
   Bursary:
     addon:
@@ -153,9 +163,6 @@ member:
         city: null
         county: null
         postcode: null
-      extras:
-        flag1: null
-        flag2: null
     Young-uns:
       name: Young-uns
       fields:
@@ -207,9 +214,6 @@ member:
         city: null
         county: null
         postcode: null
-      extras:
-        flag1: null
-        flag2: null
   types:
     A:
       name: Adult
@@ -311,9 +315,6 @@ member_editable:
   communication_method: 1
   phone: 1
   birth_date: 0
-  extra_flag1: 1
-  extra_flag2: 1
-  add_on_extra: 1
 checkin:
   display: 'N'
   communication_method: E
@@ -350,34 +351,15 @@ conreg_options:
     - '36|3|Fan tables||1|2|Default|0|0|'
     - '33|3|Exhibiting in the Art Show||0|3|Default|0|0|'
     - '35|3|I am interested in creche services||0|5|Default|0|0|'
-discord:
-  token: ''
-  channel_id: ''
-  types:
-    A: true
-    U: true
-    C: false
-    I: false
-    S: true
-  max_invites: 50
-  template_subject: 'Your invitation to the Contract 2028 Discord Server'
-  template_body: '<p>Dear [first_name],</p><p>The Discord server for Contract 2028 is now open.</p><p>Once you join the Discord server, you will have access to Contract 2028, including channels relating to talks, readings, fan chats, workshops, guest chats and games, as well as our dealers and fan tables, and social events. You will need to register a Discord account in order to join the Contract 2028 server. Please make sure you create and register your Discord account before clicking on the Invite link.&nbsp; If you choose not to join us on Discord, you can still view panels that were recorded during the convention on YouTube.</p><p>Here is your personal invitation link:</p><p>[invite_url]</p><p>Click the link and follow the instructions. This link may only be used once, so please do not share it.</p><p>We look forward to seeing you on Discord.</p><p>Best wishes,<br>The Contract 2028 team</p>'
-  template_format: basic_html
 simple_conreg_options:
   option_groups: "1|textfields|access|Access|0|1\r\n3|checkboxes|contact_about|Please contact me about (tick all that apply)...|0|1"
   options: "1|1|I have access requirements|Please use this box to tell us about any access needs you have.|0|1|Default,Young-uns\r\n31|3|I'd like to help with the convention|Are there specific areas you'd like to help?|1|1|Default\r\n32|3|Dealers' room tables||1|2|Default\r\n36|3|Fan tables||1|2|Default\r\n33|3|Exhibiting in the Art Show||0|3|Default\r\n35|3|I am interested in creche services||0|5|Default"
-member_check_intro: "To check your membership details, please enter your email address below. For privacy reasons, we can only confirm your membership by email. If you don't receive an email within a few minutes, please check your spam folder."
-discount:
-  enable: 0
-  free_every: null
 bulkemail:
   from_name: 'Contract - Eastercon 2028'
   from_email: info@eastercon2028.org
   template_subject: 'Eastercon 2028 - Weekly communication 4'
   template_body: '<p></p>'
   template_format: basic_html
-closed_message_text: ''
-closed_message_format: content_format
 simplenews:
   options:
     ec26_contract_all:
